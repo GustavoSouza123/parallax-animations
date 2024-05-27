@@ -2,6 +2,7 @@ import React from "react";
 import Ball from "./Ball";
 import "./index.css";
 
+import { motion } from "framer-motion"
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 export default function App() {
@@ -16,7 +17,12 @@ export default function App() {
                     backgroundColor: '#000',
                 }}
             >
-                <h2>Hello world</h2>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                >
+                    <h2>Hello world</h2>
+                </motion.div>
             </ParallaxLayer>
 
             <ParallaxLayer
