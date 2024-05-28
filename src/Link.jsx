@@ -15,6 +15,7 @@ export default function Link({ href, text }) {
 
     function handleClick() {
         setY.start({ y: document.querySelector(href).getBoundingClientRect().top } );
+        console.log(document.querySelector(href).getBoundingClientRect().top)
     }
 
     return (

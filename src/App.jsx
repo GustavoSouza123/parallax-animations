@@ -44,7 +44,7 @@ export default function App() {
                     marginTop: '50px',
                 }}
             >
-                <h2>My name is Gustavo</h2>
+                <h2>My name is Cubo</h2>
             </ParallaxLayer>
 
             <ParallaxLayer
