@@ -1,0 +1,16 @@
+a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0 10px;
+    text-decoration: none;
+    transition: .2s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a:hover {
+    background: #444;
+}

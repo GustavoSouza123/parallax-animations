@@ -1,8 +1,9 @@
 import React from "react";
+import Header from "./Header";
 import Ball from "./Ball";
-import "./index.css";
+import "./css/index.css";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 export default function App() {
@@ -10,16 +11,26 @@ export default function App() {
         <Parallax pages={4}>
 
             <ParallaxLayer
+                className="header"
+                offset={0}
+                speed={1}
+            >
+                <Header />
+            </ParallaxLayer>
+
+            <ParallaxLayer
                 className="parallax"
+                id="home"
                 offset={0}
                 speed={0.7}
                 style={{
                     backgroundColor: '#000',
+                    marginTop: '-50px',
                 }}
             >
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                 >
                     <h2>Hello world</h2>
                 </motion.div>
@@ -27,18 +38,18 @@ export default function App() {
 
             <ParallaxLayer
                 className="parallax"
-                offset={0.1}
+                offset={0}
                 speed={1.3}
-                factor={1}
                 style={{
-                    paddingTop: '30px'
+                    marginTop: '50px',
                 }}
             >
-                <h2>My name is Gustavo Souza</h2>
+                <h2>My name is Gustavo</h2>
             </ParallaxLayer>
 
             <ParallaxLayer
                 className="parallax"
+                id="about"
                 offset={1}
                 speed={1}
                 style={{
@@ -59,6 +70,7 @@ export default function App() {
 
             <ParallaxLayer
                 className="parallax"
+                id="projects"
                 offset={2}
                 speed={1}
                 style={{
@@ -70,6 +82,7 @@ export default function App() {
 
             <ParallaxLayer
                 className="parallax"
+                id="contact"
                 offset={3}
                 speed={1}
                 style={{
