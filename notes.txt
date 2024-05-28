@@ -1,0 +1,4 @@
+to do:
+
+- make header position fixed
+- fix nav links issue

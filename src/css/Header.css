@@ -1,5 +1,5 @@
 header {
-    height: 50px;
+    height: 70px;
     color: #fff;
     display: flex;
     align-items: center;
@@ -8,7 +8,7 @@ header {
 }
 
 header nav {
-    height: 70%;
+    height: 60%;
 }
 
 header nav ul {

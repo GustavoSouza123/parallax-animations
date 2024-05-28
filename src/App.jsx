@@ -29,8 +29,8 @@ export default function App() {
                 }}
             >
                 <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
                 >
                     <h2>Hello world</h2>
                 </motion.div>

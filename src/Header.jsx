@@ -8,10 +8,10 @@ export default function Header() {
             <div className="logo">Logo</div>
             <nav className="links">
                 <ul>
-                    <Link href="#home" text="Home" />
-                    <Link href="#about" text="About" />
-                    <Link href="#projects" text="Projects" />
-                    <Link href="#contact" text="Contact" />
+                    <li><Link href="#home" text="Home" /></li>
+                    <li><Link href="#about" text="About" /></li>
+                    <li><Link href="#projects" text="Projects" /></li>
+                    <li><Link href="#contact" text="Contact" /></li>
                 </ul>
             </nav>
         </header>

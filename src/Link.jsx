@@ -13,12 +13,13 @@ export default function Link({ href, text }) {
         }
     }));
 
-    function handleClick() {
+    function handleClick(e) {
+        e.preventDefault();
         setY.start({ y: document.querySelector(href).getBoundingClientRect().top } );
         console.log(document.querySelector(href).getBoundingClientRect().top)
     }
 
     return (
-        <a onClick={handleClick}>{text}</a>
+        <a href="#" onClick={() => handleClick(event)}>{text}</a>
     );
 }
