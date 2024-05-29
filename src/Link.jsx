@@ -13,7 +13,7 @@ export default function Link({ href, text }) {
             return true;
         });
 
-        console.log(heights.reduce((acc, height) => acc + height, 0)); // debug
+        // console.log(heights.reduce((acc, height) => acc + height, 0)); // debug
 
         document.querySelector('.container').scrollTo({
             top: heights.reduce((acc, height) => acc + height, 0),
