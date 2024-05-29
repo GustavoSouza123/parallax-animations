@@ -1,25 +1,27 @@
 import React from "react";
 import "./css/Link.css";
 
-import { useSpring, config } from "@react-spring/web";
+export default function Link({ href, text }) {    
+    function handleClick() {
+        let heights = [];
 
-export default function Link({ href, text }) {
-    const [y, setY] = useSpring(() => ({
-        immediate: false,
-        config: config.slow,
-        y: 0,
-        onFrame: props => {
-            window.scroll(0, props.y);     
-        }
-    }));
+        Array.from(document.querySelectorAll('.section')).every(section => {
+            if(section.id === href) {
+                return false;
+            }
+            heights.push(section.getBoundingClientRect().height);
+            return true;
+        });
 
-    function handleClick(e) {
-        e.preventDefault();
-        setY.start({ y: document.querySelector(href).getBoundingClientRect().top } );
-        console.log(document.querySelector(href).getBoundingClientRect().top)
+        console.log(heights.reduce((acc, height) => acc + height, 0)); // debug
+
+        document.querySelector('.container').scrollTo({
+            top: heights.reduce((acc, height) => acc + height, 0),
+            behavior: 'smooth'
+        });
     }
 
     return (
-        <a href="#" onClick={() => handleClick(event)}>{text}</a>
+        <a onClick={handleClick}>{text}</a>
     );
 }

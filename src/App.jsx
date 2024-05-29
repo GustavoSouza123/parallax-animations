@@ -8,18 +8,24 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 export default function App() {
     return (
-        <Parallax pages={4}>
+        <Parallax className="container" pages={4}>
 
             <ParallaxLayer
                 className="header"
                 offset={0}
                 speed={1}
             >
-                <Header />
+                <motion.div
+                    initial={{ opacity: 0, y: -70 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ type: "spring", delay: 0.3, duration: 0.7 }}
+                >
+                    <Header />
+                </motion.div>
             </ParallaxLayer>
 
             <ParallaxLayer
-                className="parallax"
+                className="parallax section"
                 id="home"
                 offset={0}
                 speed={0.7}
@@ -31,6 +37,7 @@ export default function App() {
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
+                    transition={{ type: "spring", delay: 0.3, duration: 0.7 }}
                 >
                     <h2>Hello world</h2>
                 </motion.div>
@@ -44,11 +51,17 @@ export default function App() {
                     marginTop: '50px',
                 }}
             >
-                <h2>My name is Cubo</h2>
+                <motion.div
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ type: "spring", delay: 0.3, duration: 0.7 }}
+                >
+                    <h2>My name is Cubo</h2>
+                </motion.div>
             </ParallaxLayer>
 
             <ParallaxLayer
-                className="parallax"
+                className="parallax section"
                 id="about"
                 offset={1}
                 speed={1}
@@ -69,10 +82,11 @@ export default function App() {
             <ParallaxLayer offset={1.4} speed={2}><Ball size={50} left="50" /></ParallaxLayer>
 
             <ParallaxLayer
-                className="parallax"
+                className="parallax section"
                 id="projects"
                 offset={2}
                 speed={1}
+                factor={2}
                 style={{
                     backgroundColor: '#000',
                 }}
@@ -81,7 +95,7 @@ export default function App() {
             </ParallaxLayer>
 
             <ParallaxLayer
-                className="parallax"
+                className="parallax section"
                 id="contact"
                 offset={3}
                 speed={1}
