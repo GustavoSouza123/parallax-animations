@@ -34,7 +34,7 @@ export default function App() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ type: "spring", delay: 0.7, duration: 0.7 }}
                     >
-                        <h2>Hello world</h2>
+                        <h2 className="title">Hello world</h2>
                     </motion.div>
                 </ParallaxLayer>
 
@@ -51,7 +51,7 @@ export default function App() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ type: "spring", delay: 0.7, duration: 0.7 }}
                     >
-                        <h2>My name is Cubo</h2>
+                        <h2 className="subtitle">My name is Cubo</h2>
                     </motion.div>
                 </ParallaxLayer>
 
@@ -61,14 +61,14 @@ export default function App() {
                     offset={1}
                     speed={1}
                     style={{
-                        backgroundColor: '#222',
+                        backgroundColor: '#1a1a1a',
                     }}
                 >
                     <motion.div
                         initial={{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ type: "spring", delay: 0.3, duration: 0.7 }}
-                        viewport={{ once: true }}
+                        // viewport={{ once: true }}
                     >
                         <h2>My first React Spring app</h2>
                     </motion.div>
@@ -89,7 +89,7 @@ export default function App() {
                     offset={2}
                     speed={1}
                     style={{
-                        backgroundColor: '#000',
+                        backgroundColor: '#333',
                     }}
                 >
                     <motion.div

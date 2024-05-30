@@ -5,7 +5,7 @@ export default function Ball({ size = 100, left = '40', opacity = 0.5 }) {
         display: 'block',
         width: `${size}px`,
         height: `${size}px`,
-        backgroundColor: 'blue',
+        backgroundColor: '#ffffffaa',
         borderRadius: '50%',
         marginLeft: `${left}%`,
         opacity: opacity
